@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inputs</title>
+</head>
+
+<body>
+    <h1>Register</h1>
+
+    <form action="none">
+        <label for="fname">First Name:</label>
+        <input id="fname" type="text" placeholder="John" required>
+        <label for="lname">Last Name:</label>
+        <input id="lname" type="text" placeholder="Smith" required>
+        <br>
+
+        <label for="male">Male:</label>
+        <input type="radio" id="male" required>
+        <label for="female">Female:</label>
+        <input type="radio" id="female" required>
+        <label for="other">Other:</label>
+        <input type="radio" id="other" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="your email" id="email" required>
+        <label for="pw">Password:</label>
+        <input type="password" placeholder="1234566" id="pw" pattern=".{6,12}" required title="Password must be 6-12 characters long">
+        <br>
+
+        <label for="birthday">Birthday:</label>
+        <input id="birthday" type="date" required>
+        <br>
+
+        <label for="terms">I accept the terms and conditions</label>
+        <input type="checkbox" id="terms" required>
+        <br>
+
+        <button type="Submit">Submit</button>
+    </form>
+</body>
+
+</html>

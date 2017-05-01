@@ -1,0 +1,60 @@
+/*Tag selector*/
+
+@azul-clarin: rgba(161, 214, 235, .8);
+body {
+    background: azul-clarin;
+}
+
+
+/*Class selector*/
+
+.other {
+    color: rgb(37, 25, 184);
+    text-decoration: line-through;
+}
+
+
+/*ID selector*/
+
+#special {
+    color: red;
+}
+
+
+/*Star - Applies to everything*/
+
+* {
+    border: 1px solid lightgrey;
+}
+
+
+/*Descendant Selector - Applies to tags nested in
+the other specified tags*/
+
+li a strong {
+    /* applies to every 'strong' nested in an 'anchor' nested in a 'list' element */
+    text-decoration: line-through;
+    color: rgb(114, 21, 223);
+}
+
+
+/*Adjacent Selector - affects what is adjacent to first element */
+
+br+em {
+    text-decoration: underline;
+    color: rgb(230, 176, 15);
+}
+
+
+/*Attribute Selector - applies to every given tag with the given attribute*/
+
+a[href="https://google.com"] {
+    color: rgb(80, 149, 241);
+}
+
+
+/*nth of type - applies to the nth element of something (see doc)*/
+
+li:nth-of-type(3) {
+    background: rgba(231, 246, 249, 0.74);
+}

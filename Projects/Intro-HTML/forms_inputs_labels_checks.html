@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FormTags</title>
+</head>
+
+<body>
+    <h1>Sign in</h1>
+    <!-- action - where to send the request default=local -->
+    <!-- method - what http method (get or set) default=get -->
+    <form action="http://wikipedia.org" method="GET">
+        <label for="user">Username:</label>
+        <!-- Type email checks for email formatted string -->
+        <!-- required demands the user to fill the form -->
+        <input id="user" type="email" placeholder="user" required>
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="password" required>
+        <button type="submit">PressHere</button>
+    </form>
+
+    <form action="none">
+        <p>Do you prefer cats or dogs?</p>
+
+        <label for="dogs">Dogs</label>
+        <input name="petChoice" id="dogs" type="radio" value="Dogs">
+        <label for="cats">Cats:</label>
+        <input name="petChoice" id="cats" type="radio" value="Cats">
+
+        <p>What about your favorite colours?</p>
+
+        <select name="color">
+            <option value="R">Red</option>
+            <option value="B">Blue</option>
+            <option value="G">Green</option>
+        </select>
+
+        <input type="text">
+        <textarea name="paragraph" rows="1" cols="10" autofocus=""></textarea>
+        <button type="submit" name="button">Go!</button>
+    </form>
+</body>
+
+</html>

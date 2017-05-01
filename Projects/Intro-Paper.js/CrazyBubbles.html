@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="paperjs/dist/paper-full.js"></script>
+  <link rel="stylesheet" href="circles.css" type="text/css">
+
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    <canvas id="myCanvas" resize="true"></canvas>
+  </div>
+
+<script type="text/paperscript" canvas="myCanvas">
+
+  var n = 500;
+  var circle = new Path.Circle({
+    center: [0,0],
+    radius: 15,
+    fillColor: 'white',
+    strokeColor: 'black'
+  } );
+
+  var sCircle = new Symbol(circle);
+
+  for (i = 0; i < n; i++){
+    var psC = sCircle.place(Point.random()*view.size);
+    psC.scale(i/n);
+  }
+
+  function onFrame(event){
+    rnd = Point.random();
+    for (i = 0; i < n; i++){
+      el = project.activeLayer.children[i];
+      el.position.x += el.bounds.width/20;
+      if (el.bounds.left > view.size.width) el.position.x = -el.bounds.width;
+    }
+  }
+
+</script>
+
+</body>
+</html>

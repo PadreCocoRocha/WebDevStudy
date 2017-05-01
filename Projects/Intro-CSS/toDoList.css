@@ -1,0 +1,12 @@
+body {
+    background: rgba(161, 214, 235, .8);
+}
+
+.other {
+    color: rgb(37, 25, 184);
+    text-decoration: line-through;
+}
+
+#special {
+    color: red;
+}

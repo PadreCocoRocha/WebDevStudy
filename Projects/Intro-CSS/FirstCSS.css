@@ -1,0 +1,21 @@
+h1 {
+    color: rgb(23, 82, 170);
+    border-color: rgba(116, 198, 25, 0.86);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: outset;
+}
+
+h4 {
+    color: rgb(30, 108, 224);
+}
+
+li {
+    color: rgb(23, 82, 170);
+}
+
+body {
+    background: url(http://wallpaperspics.com/wallpapers/26/2/notation-musical-sheet-swirl-music-spiral-268578.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
