@@ -1,0 +1,10 @@
+<% include partials/header %>
+
+<h1>Ths posts page</h1>
+<p>Posts go here!</p>
+
+<% posts.forEach(function(post){ %>
+    <li><%= post.title %> - <strong><%= post.author %></strong></li>
+<% }); %>
+
+<% include partials/footer %>

@@ -1,0 +1,9 @@
+body {
+    background: yellow;
+    color: blue;
+} 
+
+.fit {
+    max-width: 60%;
+    max-height: 60%;
+}
