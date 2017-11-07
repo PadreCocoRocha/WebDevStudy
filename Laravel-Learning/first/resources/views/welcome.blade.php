@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Homepage</title>
-</head>
-<body>
-</body>
-</html>
+@extends ('layouts.master')
+
+@section ('content')
+	<h1>Welcome page!</h1>
+@endsection
