@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\{Post, Comment};
+use App\Repositories\Posts;
 use Carbon\Carbon;
+
 class PostsController extends Controller
 {
     public function __construct(){
@@ -17,11 +19,9 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Posts $posts)
     {
-        $posts = Post::latest()
-            ->filter(request(['month', 'year']))
-            ->get();
+        $posts = $posts->getFiltered();
 
         return view('posts.index', compact('posts'));
     }
