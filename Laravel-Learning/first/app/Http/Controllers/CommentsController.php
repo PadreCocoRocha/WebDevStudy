@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-		use App\{Post,Comment};
+use App\{Post,Comment};
 
 class CommentsController extends Controller
 {
-    public function store(Post $post){
-    	$this->validate(request(), [
-    		'body' => 'required|min:2'
-    	]);
+	public function store(Post $post){
+		$this->validate(request(), [
+			'body' => 'required|min:2'
+		]);
 
-    	$post->addComment(request('body'));
+		if (auth()->check()){
+			$post->addComment(auth()->id(), request('body'));
+			
+			session()->flash('message', 'Your post has been published!');
+		}
 
-    	return back();
-    }
+		return back();
+	}
 }

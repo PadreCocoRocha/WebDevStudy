@@ -1,5 +1,11 @@
 @extends ('layouts.master')
 
+@if ($flash = session('message'))
+	<div id="flash-message" class="alert alert-success">
+		{{ $flash }}
+	</div>
+@endif
+
 @section ('content')
     {{-- Blog main slice of page html --}}
     @foreach ($posts as $post)
