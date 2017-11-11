@@ -14,16 +14,18 @@
 					<strong> 
 						{{ $comment->created_at->diffForHumans() }}
 					</strong> 
-					by {{ "Who?" }}
+					by <a href="/users/{{ $comment->user->id }}">{{ $comment->user->name }}</a>
 					<br>
 					{{ $comment->body }}
 				</li>
 			@endforeach
 		</ul>
 	</div>
-0
+
+	{{-- Include errors partial --}}
 	<hr>
   @include ('partials.errors')
+
 	{{-- Add a comment --}}
 	<div class="card">
 		<div class="card-header">

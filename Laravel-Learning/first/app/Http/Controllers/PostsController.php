@@ -10,6 +10,7 @@ use Carbon\Carbon;
 
 class PostsController extends Controller
 {
+
 	public function __construct(){
 		$this->middleware('auth')->except(['index', 'show']);
 	}
@@ -68,7 +69,8 @@ class PostsController extends Controller
 	public function show(Post $post)
 	{
 		$comments = $post->comments;
-		return view('posts.show', compact(['post','comments']));
+		$tags = $post->tags->pluck('name');
+		return view('posts.show', compact(['post','comments', 'tags']));
 	}
 
 	/**
