@@ -1,0 +1,15 @@
+{
+    "name": "lucas/7-interaces",
+    "authors": [
+        {
+            "name": "PadreCocoRocha",
+            "email": "lucasbortoto.lbr@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"App\\": "src"
+    	}
+    }
+}
