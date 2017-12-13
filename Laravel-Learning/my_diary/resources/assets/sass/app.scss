@@ -1,0 +1,107 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+body {
+    padding-top: 50px;
+}
+
+div.mood span {
+    /*todo*/
+}
+
+ul.no-dots {
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+.column-input { 
+    padding: 0 5% 0 5%;
+}
+
+.crazy-look {
+    width: 100px;
+    border: 5px solid orange;
+    color: red; 
+}
+
+.page-header{
+    height: auto;
+    /*line-height: auto;*/
+    white-space: nowrap;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+.app-body {
+    margin-top: 20px;
+    width: auto;
+    height: 65vh;
+}
+
+.full-height {
+    height: inherit;
+}
+
+.centered {
+    text-align: center;
+}
+
+.bottom-aligned {
+    position: absolute;
+    margin: 0 auto; left: 0; right: 0;
+    bottom: 0;
+}
+
+.main-column-border {
+    border-right: 1px solid #dddddd; 
+}
+
+/*manually added figure*/
+.fax-anger-o:before {
+    content: "\1f4a2";
+}
+
+div.inline-container {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+ul.inline-container li {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+}
+
+ul.inline-container li span i {
+    float: right;
+}
+
+.inline-container span,
+.inline-container p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+span i {
+    padding: auto;
+}
+
+li {
+    margin: 5px 0px 5px 0px;
+}
+
+ul {
+    padding-left: 0;
+}
